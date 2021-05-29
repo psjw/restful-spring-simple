@@ -1,0 +1,41 @@
+#port설정
+server:
+  port: 8088
+  tomcat:
+    uri-encoding: UTF-8
+
+# logging level  org.springframewokr 패키지 아래 DUBUG 레벨로 설정
+logging:
+  level:
+    org.springframework: DEBUG
+
+# locale설정 파일명 messages
+spring:
+  messages:
+    basename: messages
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  security:
+    user:
+      name: username
+      password: 1234
+  jpa:
+    show-sql: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "heapdump,threaddump"
+
+
+
+
+
+h2:
+  console:
+    enabled: true
